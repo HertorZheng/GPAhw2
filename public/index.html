@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>GPA Calculator</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course (optional)</th>
+                    <th>Grade</th>
+                    <th>Credits</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="courses">
+                <!-- Default row added here -->
+                <tr>
+                    <td><input type="text" placeholder="Course name"></td>
+                    <td><input type="text" placeholder="Grade"></td>
+                    <td><input type="number" placeholder="Credits"></td>
+                    <td><button onclick="deleteRow(this)">x</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="addRow()">+ Add row</button>
+        <button onclick="calculateGPA()">= Calculate</button>
+        <button onclick="reset()">x Reset</button>
+        <h2>GPA: <span id="gpa"></span></h2>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
