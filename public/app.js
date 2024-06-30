@@ -29,9 +29,9 @@ async function fetchCourses() {
     courses.forEach(course => {
         const row = document.createElement('tr'); // Creating a new row
         row.innerHTML = `
-            <td><input type="text" value="${course.name}" placeholder="Course name"></td>
-            <td><input type="text" value="${course.grade}" placeholder="Grade"></td>
-            <td><input type="number" value="${course.credits}" placeholder="Credits"></td>
+            <td><input type="text" value="${course.name || ''}" placeholder="Course name"></td>
+            <td><input type="text" value="${course.grade || ''}" placeholder="Grade"></td>
+            <td><input type="number" value="${course.credits || ''}" placeholder="Credits"></td>
             <td><button onclick="deleteRow(this)">x</button></td>
         `;
         table.appendChild(row); // Appending the row to the table
